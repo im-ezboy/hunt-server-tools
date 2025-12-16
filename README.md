@@ -1,44 +1,36 @@
-# All Tools you need for a hunt server
+## Hunt Server Tools
 
-### This is most complated script for hunt server
+The `install.sh` script automatically installs a collection of popular **Bug Bounty / Recon** tools on your Linux server and stores them under the `~/Weapons` directory.
 
-#### You can see all available tools:
+### Tools Installed
 
-1. Sublist3r
-  
-2. lazyrecon
-  
-3. waybackurls
-  
-4. sqlmap
-  
-5. 4 zero 3 (403 Bypass)
-  
-6. SecList
-  
-7. dnscan
-  
-8. assetsfinder
-  
-9. gau
-  
-10. gobuster
-  
-11. httpx
-  
-12. nmap
-  
-13. wpscan
-  
-14. dirsearch
-  
-15. amass
-  
-16. httproble
-  
-17. Pdtm
+- **Sublist3r**
+- **lazyrecon**
+- **waybackurls**
+- **sqlmap**
+- **4-ZERO-3 (403 Bypass)**
+- **SecLists**
+- **dnscan**
+- **assetfinder**
+- **gau**
+- **gobuster**
+- **nmap**
+- **wpscan**
+- **dirsearch**
+- **amass**
+- **ffuf**
+- **httprobe**
+- **pdtm** (ProjectDiscovery Tool Manager) and related tools
 
-#### SetUp For zsh Terminal ->
+### Requirements
+
+- OS: **Debian/Ubuntu-based** distributions
+- **sudo** privileges
+- Stable internet connection
+
+To use Go-based tools, you need Go installed. If you don't have Go yet, you can install it as shown below.
+
+### Install Go and clone the repository
 
 ```bash
 wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
@@ -47,18 +39,30 @@ sudo mv go /usr/local/
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
 source ~/.zshrc
 rm -rf go1.22.0.linux-amd64.tar.gz
-sudo git clone https://github.com/im-0day/hunt.git
+
+git clone https://github.com/im-0day/hunt.git
 cd hunt
 chmod +x install.sh
 ./install.sh
 ```
-#### Zsh installation
+
+> If you are using `bash`, replace `~/.zshrc` with `~/.bashrc` in the command above.
+
+### Install Zsh (optional)
+
 ```bash
-apt install zsh
+sudo apt update
+sudo apt install -y zsh curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+### Notes
 
-#### i hope you enjoy bughunting
+- After running `install.sh`, all tools are available under the `~/Weapons` directory.
+- Some tools may require additional configuration (such as API keys or custom wordlists) for optimal use.
 
-##### Created with Love <3
+---
+
+#### Happy bug hunting!
+
+##### Created with Love `<3`
