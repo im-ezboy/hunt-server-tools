@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-G='\033[0;32m' # Green Colour
+G='\033[0;32m' # green Colour
 NC='\033[0m'   # No colour
 
 echo -e "${G}[+] Special thanks and credits to EZBOY ${NC}"

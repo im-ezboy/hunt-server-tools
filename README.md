@@ -1,4 +1,4 @@
-## Hunt Server Tools
+## Hunt server Tools
 
 The `install.sh` script automatically installs a collection of popular **Bug Bounty / Recon** tools on your Linux server and stores them under the `~/Weapons` directory.
 
